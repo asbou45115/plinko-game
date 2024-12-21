@@ -9,18 +9,6 @@ body {
     margin: 0;
 }
 
-#plinko-board {
-    width: 900px;
-    height: 1000px;
-    background-color: #27333f;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
 .control-panel {
     width: 200px;
     padding: 20px;
@@ -50,3 +38,54 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
+
+#multiplier-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.multiplier-box {
+    margin: 1.5px;
+    width: 37.5px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(31, 31, 31);
+    border-radius: 6.5px;
+}
+
+
+.red {
+    background-color: #e60000;
+}
+
+.orange {
+    background-color: #ff6f00;
+}
+
+.yellow {
+    background-color: #ffcc00;
+}
+
+/* #graph-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    margin: 1px;
+    align-items: flex-end;
+}
+
+.graph-bar {
+    margin: 1px;
+    width: 38px;
+    height: 0;
+    background-color: #4CAF50;
+    transition: height 0.3s ease;
+} */
