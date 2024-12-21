@@ -1,1 +1,32 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plinko Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="control-panel">
+            <div class="row-settings">
+                <label>Rows</label>
+                <select>
+                    <!-- <option>8</option>
+                    <option>10</option>
+                    <option>12</option> -->
+                    <option>16</option>
+                </select>
+            </div>
+            <button class="drop-ball-button">Drop Ball</button>
+        </div>
+
+        <div id="plinko-board">
+            <!-- Pegs will be added dynamically -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="plinko.js"></script>
+</body>
+</html>
