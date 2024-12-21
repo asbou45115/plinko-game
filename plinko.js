@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         engine: engine,
         options: {
             width: 900,
-            height: 800,
+            height: 1000,
             wireframes: false, 
             background: '#27333f',
         }
@@ -23,12 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     Engine.run(engine);
     Render.run(render);
 
+    let pegs = [];
+
     function createPegs(rows) {
-        const pegs = [];
         const pegRadius = 5;
-        const spacingX = 30;
-        const spacingY = 40;
-        const offsetX = 450;
+        const spacingX = 40;
+        const spacingY = 47;
+        const offsetX = render.options.width / 2;
         const offsetY = 20;
 
         for (let row = 2; row < rows + 2; row++) {
@@ -49,11 +50,19 @@ document.addEventListener("DOMContentLoaded", function () {
         World.add(engine.world, pegs);
     }
 
+    function clearPegs() {
+        pegs.forEach(function(peg) {
+            World.remove(engine.world, peg);
+        });
+
+        pegs = [];
+    }
+
     createPegs(16);
 
     function dropBall() {
-        const ball = Bodies.circle(450, 0, 5, {
-            restitution: 0.5,  // Bounciness
+        const ball = Bodies.circle(render.options.width / 2, 0, 8, {
+            restitution: 0.6,  // Bounciness
             render: {
                 fillStyle: 'red'
             }
@@ -65,4 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Button to drop the ball
     const dropButton = document.querySelector('.drop-ball-button');
     dropButton.addEventListener('click', dropBall);
+
+    document.getElementById('row-select').addEventListener('change', function() {
+        clearPegs();
+        const rows = parseInt(this.value);
+        createPegs(rows);
+    })
 });

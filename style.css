@@ -11,7 +11,7 @@ body {
 
 #plinko-board {
     width: 900px;
-    height: 800px;
+    height: 1000px;
     background-color: #27333f;
     border-radius: 10px;
     position: relative;
