@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Events = Matter.Events;
 
     const engine = Engine.create();
-    engine.world.gravity.y = 0.144;
+    engine.world.gravity.y = 0.142;
 
     const render = Render.create({
         element: document.getElementById('plinko-board'),
