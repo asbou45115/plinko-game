@@ -9,15 +9,20 @@
 <body>
     <div class="game-container">
         <div class="control-panel">
-            <div class="row-settings">
-                <label>Rows</label>
-                <select id="row-select">
-                    <option>8</option>
-                    <option>12</option>
-                    <option selected>16</option>
-                </select>
+            <div class="bet-settings">
+                <label>Bet Amount</label>
+                <div class="bet-input-group">
+                    <input id="bet-amount" type="text" value="0.0000000000">
+                    <div class="bet-buttons">
+                        <button id="half-bet">½</button>
+                        <button id="double-bet">2x</button>
+                    </div>
+                </div>
             </div>
-            <button class="drop-ball-button">Drop Ball</button>
+            <div class="bet-button-group">
+                <button class="drop-ball-button">Bet</button>
+                <div id="total-profit-display">Total Profit: 0.0000000000</div>
+            </div>
         </div>
 
         <div id="plinko-board">
@@ -44,25 +49,33 @@
             <div class="multiplier-box red">1000</div>
         </div>
 
-        <!-- <div id="graph-container">
-            <div class="graph-bar" id="bar-0"></div>
-            <div class="graph-bar" id="bar-1"></div>
-            <div class="graph-bar" id="bar-2"></div>
-            <div class="graph-bar" id="bar-3"></div>
-            <div class="graph-bar" id="bar-4"></div>
-            <div class="graph-bar" id="bar-5"></div>
-            <div class="graph-bar" id="bar-6"></div>
-            <div class="graph-bar" id="bar-7"></div>
-            <div class="graph-bar" id="bar-8"></div>
-            <div class="graph-bar" id="bar-9"></div>
-            <div class="graph-bar" id="bar-10"></div>
-            <div class="graph-bar" id="bar-11"></div>
-            <div class="graph-bar" id="bar-12"></div>
-            <div class="graph-bar" id="bar-13"></div>
-            <div class="graph-bar" id="bar-14"></div>
-            <div class="graph-bar" id="bar-15"></div>
-            <div class="graph-bar" id="bar-16"></div>
-        </div> -->
+        <div id="graph-container">
+            <div id="y-axis">
+                <div class="y-axis-label">0</div>
+                <div class="y-axis-label">0</div>
+                <div class="y-axis-label">0</div>
+            </div>
+            <div id="graph-bars">
+                <div class="graph-bar" id="bar-0"></div>
+                <div class="graph-bar" id="bar-1"></div>
+                <div class="graph-bar" id="bar-2"></div>
+                <div class="graph-bar" id="bar-3"></div>
+                <div class="graph-bar" id="bar-4"></div>
+                <div class="graph-bar" id="bar-5"></div>
+                <div class="graph-bar" id="bar-6"></div>
+                <div class="graph-bar" id="bar-7"></div>
+                <div class="graph-bar" id="bar-8"></div>
+                <div class="graph-bar" id="bar-9"></div>
+                <div class="graph-bar" id="bar-10"></div>
+                <div class="graph-bar" id="bar-11"></div>
+                <div class="graph-bar" id="bar-12"></div>
+                <div class="graph-bar" id="bar-13"></div>
+                <div class="graph-bar" id="bar-14"></div>
+                <div class="graph-bar" id="bar-15"></div>
+                <div class="graph-bar" id="bar-16"></div>
+            </div>
+        </div>        
+        
     </div>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
