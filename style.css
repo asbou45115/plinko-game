@@ -173,3 +173,31 @@ body {
     background-color: #4CAF50;
     transition: height 0.3s ease;
 }
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #27333f;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a.github-link {
+    color: #BB86FC;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.github-link:hover {
+    text-decoration: underline;
+}
+
